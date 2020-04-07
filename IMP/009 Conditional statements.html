@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>009 Conditional statements</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 4, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1194424, "assessment_type": "multiple-choice", "created": "2017-02-13T17:46:57Z", "prompt": {"question": "<p>Which is the best practice to use while loop?</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ["6482906"], "answers": ["<p>Use when in replace of for</p>", "<p>should be used if we don't know the number of time the code need to be executed</p>", "<p>Should be used if we know the number of time the code need to be executed</p>"]}, "correct_response": ["b"], "updated": "2017-02-13T17:46:57Z", "section": "", "question_plain": "Which is the best practice to use while loop?", "related_lectures": [{"_class": "lecture", "id": 6482906, "title": "While Loop", "created": "2017-02-05T06:20:20Z", "asset": {"_class": "asset", "id": 7823508, "asset_type": "Video", "title": "while loop.mp4", "created": "2017-02-19T17:32:54Z"}, "object_index": 53, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482906"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194428, "assessment_type": "multiple-choice", "created": "2017-02-13T17:54:02Z", "prompt": {"question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">var = ''\nfor i in range(0,10,2):\n  var = var + i\nprint(var)</pre>", "feedbacks": ["var is defined as string. so we cant add string and integer to form a string.You need to convert i to string to get this value.", "", "", ""], "relatedLectureIds": ["6482904"], "answers": ["<p>02468</p>", "<p>0246810</p>", "<p>error</p>", "<p>123456789</p>"]}, "correct_response": ["c"], "updated": "2017-02-13T17:54:02Z", "section": "", "question_plain": "What will be the output?\n\nvar = ''\nfor i in range(0,10,2):\n  var = var + i\nprint(var)", "related_lectures": [{"_class": "lecture", "id": 6482904, "title": "For Loop", "created": "2017-02-05T06:20:14Z", "asset": {"_class": "asset", "id": 7818904, "asset_type": "Video", "title": "for loop.mp4", "created": "2017-02-18T18:33:01Z"}, "object_index": 41, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482904"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194436, "assessment_type": "multiple-choice", "created": "2017-02-13T17:59:25Z", "prompt": {"question": "<p>What will be the output:</p>\n\n<pre class=\"prettyprint linenums\">list1 = [1,2,3,4,5]\nfor i in list1:\n  if i % 2 = 0 :\n    print('The number is even number')\n  else:\n    print('The number is odd number')</pre>", "feedbacks": ["", "There is only one equal to symbol in if. ", ""], "relatedLectureIds": ["6482904"], "answers": ["<p>The number is odd number<br>The number is even number<br>The number is odd number<br>The number is even number<br>The number is odd number</p>", "<p>error</p>", "<p>The number is even number<br>The number is odd number<br>The number is even number<br>The number is odd number<br>The number is even number</p>"]}, "correct_response": ["b"], "updated": "2017-02-13T17:59:25Z", "section": "", "question_plain": "What will be the output:\n\nlist1 = [1,2,3,4,5]\nfor i in list1:\n  if i % 2 = 0 :\n    print('The number is even number')\n  else:\n    print('The number is odd number')", "related_lectures": [{"_class": "lecture", "id": 6482904, "title": "For Loop", "created": "2017-02-05T06:20:14Z", "asset": {"_class": "asset", "id": 7818904, "asset_type": "Video", "title": "for loop.mp4", "created": "2017-02-18T18:33:01Z"}, "object_index": 41, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482904"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194440, "assessment_type": "multiple-choice", "created": "2017-02-13T18:03:11Z", "prompt": {"question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">var = 10\nfinal = ''\nwhile (var &gt;= 0):\n  final = str(var) + final\n  var -= 1\nprint(final)</pre>", "feedbacks": ["", "", ""], "relatedLectureIds": ["6482906"], "answers": ["<p>012345678910</p>", "<p>error</p>", "<p>123456789</p>"]}, "correct_response": ["a"], "updated": "2017-02-13T18:03:11Z", "section": "", "question_plain": "What will be the output?\n\nvar = 10\nfinal = ''\nwhile (var &gt;= 0):\n  final = str(var) + final\n  var -= 1\nprint(final)", "related_lectures": [{"_class": "lecture", "id": 6482906, "title": "While Loop", "created": "2017-02-05T06:20:20Z", "asset": {"_class": "asset", "id": 7823508, "asset_type": "Video", "title": "while loop.mp4", "created": "2017-02-19T17:32:54Z"}, "object_index": 53, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482906"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

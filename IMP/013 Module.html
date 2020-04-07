@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>013 Module</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 4, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1194518, "assessment_type": "multiple-choice", "created": "2017-02-13T19:11:49Z", "prompt": {"answers": ["<p>-123</p>", "<p>124</p>", "<p>123</p>", "<p>-124</p>"], "feedbacks": ["", "", "", ""], "question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">import math\nval = -123.45\nprint(math.ceil(val))</pre>", "relatedLectureIds": ["6484036"]}, "correct_response": ["a"], "updated": "2017-02-13T19:11:49Z", "section": "", "question_plain": "What will be the output?\n\nimport math\nval = -123.45\nprint(math.ceil(val))", "related_lectures": [{"_class": "lecture", "id": 6484036, "title": "Modules", "created": "2017-02-05T13:31:24Z", "asset": {"_class": "asset", "id": 7830626, "asset_type": "Video", "title": "math range.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 74, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484036"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194526, "assessment_type": "multiple-choice", "created": "2017-02-13T19:15:23Z", "prompt": {"answers": ["<p>6.3</p>", "<p>12.6</p>", "<p>6.35</p>", "<p>6.2</p>"], "feedbacks": ["", "", "", ""], "question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">import math\nval = 2.5\nval2 = pow(val,2)\nprint(round(val2,1))</pre>", "relatedLectureIds": ["6484036"]}, "correct_response": ["d"], "updated": "2017-02-13T19:15:23Z", "section": "", "question_plain": "What will be the output?\n\nimport math\nval = 2.5\nval2 = pow(val,2)\nprint(round(val2,1))", "related_lectures": [{"_class": "lecture", "id": 6484036, "title": "Modules", "created": "2017-02-05T13:31:24Z", "asset": {"_class": "asset", "id": 7830626, "asset_type": "Video", "title": "math range.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 74, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484036"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194530, "assessment_type": "multiple-choice", "created": "2017-02-13T19:17:19Z", "prompt": {"answers": ["<p>2</p>", "<p>10</p>", "<p>56</p>", "<p>Can be any number in the list</p>"], "feedbacks": ["", "", "", ""], "question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">import random\nlist1 = [1,2,3,4,5,6]\nprint(random.choice(list1))</pre>", "relatedLectureIds": ["6484036"]}, "correct_response": ["d"], "updated": "2017-02-13T19:17:19Z", "section": "", "question_plain": "What will be the output?\n\nimport random\nlist1 = [1,2,3,4,5,6]\nprint(random.choice(list1))", "related_lectures": [{"_class": "lecture", "id": 6484036, "title": "Modules", "created": "2017-02-05T13:31:24Z", "asset": {"_class": "asset", "id": 7830626, "asset_type": "Video", "title": "math range.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 74, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484036"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194536, "assessment_type": "multiple-choice", "created": "2017-02-13T19:23:54Z", "prompt": {"answers": ["<p>sorted()</p>", "<p>reversed()</p>", "<p>shuffle()</p>", "<p>All the above</p>"], "feedbacks": ["", "", "", ""], "question": "<p>Which of the following will alter the values position in the list permanently?</p>", "relatedLectureIds": ["6484036"]}, "correct_response": ["c"], "updated": "2017-02-13T19:23:54Z", "section": "", "question_plain": "Which of the following will alter the values position in the list permanently?", "related_lectures": [{"_class": "lecture", "id": 6484036, "title": "Modules", "created": "2017-02-05T13:31:24Z", "asset": {"_class": "asset", "id": 7830626, "asset_type": "Video", "title": "math range.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 74, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484036"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

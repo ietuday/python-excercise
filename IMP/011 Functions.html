@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>011 Functions</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 4, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1194464, "assessment_type": "multiple-choice", "created": "2017-02-13T18:31:00Z", "prompt": {"answers": ["<p>30</p>", "<p>40</p>", "<p>20</p>", "<p>error</p>"], "feedbacks": ["", "", "", "All the parameters must be passed while calling function. I have passed only two parameters so it will be error."], "question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">c = 10\ndef addition(a,b,c):\n  return a+b \nprint(addition(10,20))</pre>", "relatedLectureIds": ["6484026"]}, "correct_response": ["d"], "updated": "2017-02-13T18:31:00Z", "section": "", "question_plain": "What will be the output?\n\nc = 10\ndef addition(a,b,c):\n  return a+b \nprint(addition(10,20))", "related_lectures": [{"_class": "lecture", "id": 6484026, "title": "Functions", "created": "2017-02-05T13:29:19Z", "asset": {"_class": "asset", "id": 7830628, "asset_type": "Video", "title": "functions.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 66, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484026"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194466, "assessment_type": "multiple-choice", "created": "2017-02-13T18:33:58Z", "prompt": {"answers": ["<p>The addition of 10 and 20 is 30</p>", "<p>30</p>", "<p>The addition of 10 and 20 is 30</p><p>30</p>"], "feedbacks": ["", "If the flow reads return statement it will exit from the function. whatever we write after that will not be executed", ""], "question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">c = 10\ndef addition(a,b):\n  return a+b \n  print('The addition of %s and %s is %s'%(a,b,a+b))\nprint(addition(10,20))</pre>", "relatedLectureIds": ["6484026"]}, "correct_response": ["b"], "updated": "2017-02-13T18:33:58Z", "section": "", "question_plain": "What will be the output?\n\nc = 10\ndef addition(a,b):\n  return a+b \n  print('The addition of %s and %s is %s'%(a,b,a+b))\nprint(addition(10,20))", "related_lectures": [{"_class": "lecture", "id": 6484026, "title": "Functions", "created": "2017-02-05T13:29:19Z", "asset": {"_class": "asset", "id": 7830628, "asset_type": "Video", "title": "functions.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 66, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484026"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194472, "assessment_type": "multiple-choice", "created": "2017-02-13T18:41:49Z", "prompt": {"answers": ["<p>The addition of 10 and 20 is 30<br>None</p><p>error</p>", "<p>The addition of 10 and 20 is 30</p><p>30</p>", "<p>The addition of 10 and 20 is 30</p><p>None</p><p>30</p>", "<p>Error</p>"], "feedbacks": ["The flow will display the print statement and then display none because function is not returning anything.Error will occur only when we try to access local variable  outside the function.", "", "Local variable cannot be accessed outside the funtion", "The program will print only error if there is syntax error or error code got executed first otherwise it executes the program according to the flow."], "question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">def addition(a,b):\n  c = a+b \n  print('The addition of %s and %s is %s'%(a,b,a+b))\nprint(addition(10,20))\nprint(c)</pre>", "relatedLectureIds": ["6484026"]}, "correct_response": ["a"], "updated": "2017-02-13T18:41:49Z", "section": "", "question_plain": "What will be the output?\n\ndef addition(a,b):\n  c = a+b \n  print('The addition of %s and %s is %s'%(a,b,a+b))\nprint(addition(10,20))\nprint(c)", "related_lectures": [{"_class": "lecture", "id": 6484026, "title": "Functions", "created": "2017-02-05T13:29:19Z", "asset": {"_class": "asset", "id": 7830628, "asset_type": "Video", "title": "functions.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 66, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484026"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194486, "assessment_type": "multiple-choice", "created": "2017-02-13T18:45:57Z", "prompt": {"feedbacks": ["", "", "", ""], "answers": ["<p>error</p>", "<p>20</p>", "<p>30</p>", "<p>40</p>"], "question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">odd = lambda x,y: x + y\nprint(odd(10,20))</pre>", "relatedLectureIds": ["6484028"]}, "correct_response": ["c"], "updated": "2017-02-13T18:45:57Z", "section": "", "question_plain": "What will be the output?\n\nodd = lambda x,y: x + y\nprint(odd(10,20))", "related_lectures": [{"_class": "lecture", "id": 6484028, "title": "Lambda Functions", "created": "2017-02-05T13:29:30Z", "asset": {"_class": "asset", "id": 7830624, "asset_type": "Video", "title": "lambda functions.mp4", "created": "2017-02-20T18:06:38Z"}, "object_index": 69, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484028"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

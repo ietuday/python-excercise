@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>001 Basic of python</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 5, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1193834, "assessment_type": "multiple-choice", "created": "2017-02-13T05:29:10Z", "prompt": {"feedbacks": ["Doing comparison operation the above equation will become (false and false) which will result in FALSE after doing logical operation.", "Doing comparison operation the above equation will become (false and false) which will result in FALSE after doing logical operation."], "answers": ["<p>True</p>", "<p>False</p>"], "relatedLectureIds": ["6480318"], "question": "<p>What will be the output of (3 &gt; 5 ) and (99 == 4)?</p>"}, "correct_response": ["b"], "updated": "2017-02-13T05:29:20Z", "section": "", "question_plain": "What will be the output of (3 &gt; 5 ) and (99 == 4)?", "related_lectures": [{"_class": "lecture", "id": 6480318, "title": "Logical operators", "created": "2017-02-04T18:12:23Z", "asset": {"_class": "asset", "id": 7808218, "asset_type": "Video", "title": "logical operator.mp4", "created": "2017-02-17T02:07:32Z"}, "object_index": 15, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480318"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193840, "assessment_type": "multiple-choice", "created": "2017-02-13T05:45:46Z", "prompt": {"feedbacks": ["Programming language also compile with respect to BODMAS. Try it.", "Programming language also compile with respect to BODMAS. Try it.", "Programming language also compile with respect to BODMAS so it will do multiplication first and then modules finally addition which results in the answer 7.", "Programming language also compile with respect to BODMAS. Try it."], "answers": ["<p>9</p>", "<p>10</p>", "<p>7</p>", "<p>12</p>"], "relatedLectureIds": ["6480232"], "question": "<p>What will be output <code>2 * 5 % 2 + 7</code> ?</p>"}, "correct_response": ["c"], "updated": "2017-02-13T05:45:46Z", "section": "", "question_plain": "What will be output 2 * 5 % 2 + 7 ?", "related_lectures": [{"_class": "lecture", "id": 6480232, "title": "Arithmetic operations", "created": "2017-02-04T17:52:20Z", "asset": {"_class": "asset", "id": 7808212, "asset_type": "Video", "title": "arithmetic operator.mp4", "created": "2017-02-17T02:07:30Z"}, "object_index": 11, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480232"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193842, "assessment_type": "multiple-choice", "created": "2017-02-13T05:56:26Z", "prompt": {"feedbacks": ["It will do operation inside bracket then multiplication finally do comparison which results in TRUE", ""], "answers": ["<p>True</p>", "<p>False</p>"], "relatedLectureIds": ["6480314"], "question": "<p>what will be the output of <code>(3 + 5 ) * 3 &lt; 120</code> ?</p>"}, "correct_response": ["a"], "updated": "2017-02-13T05:56:37Z", "section": "", "question_plain": "what will be the output of (3 + 5 ) * 3 &lt; 120 ?", "related_lectures": [{"_class": "lecture", "id": 6480314, "title": "Comparision operators", "created": "2017-02-04T18:11:51Z", "asset": {"_class": "asset", "id": 7808216, "asset_type": "Video", "title": "comparision operator.mp4", "created": "2017-02-17T02:07:31Z"}, "object_index": 13, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480314"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193844, "assessment_type": "multiple-choice", "created": "2017-02-13T05:58:47Z", "prompt": {"feedbacks": ["", ""], "answers": ["<p>True</p>", "<p>False</p>"], "relatedLectureIds": "", "question": "<p>What will be the output <code>(4 == (9 - 5 * 2)) or (2 ** 2 == 4) </code> ?</p>"}, "correct_response": ["a"], "updated": "2017-02-13T05:58:47Z", "section": "", "question_plain": "What will be the output (4 == (9 - 5 * 2)) or (2 ** 2 == 4)  ?", "related_lectures": [], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193846, "assessment_type": "multiple-choice", "created": "2017-02-13T06:03:05Z", "prompt": {"feedbacks": ["", ""], "answers": ["<p>False</p>", "<p>True</p>"], "relatedLectureIds": ["6480318"], "question": "<p>What will be the output <code>(True and False) or (False and ( True or False))</code> ?</p>"}, "correct_response": ["a"], "updated": "2017-04-12T17:37:49Z", "section": "", "question_plain": "What will be the output (True and False) or (False and ( True or False)) ?", "related_lectures": [{"_class": "lecture", "id": 6480318, "title": "Logical operators", "created": "2017-02-04T18:12:23Z", "asset": {"_class": "asset", "id": 7808218, "asset_type": "Video", "title": "logical operator.mp4", "created": "2017-02-17T02:07:32Z"}, "object_index": 15, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480318"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>002 Variables</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 5, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1193906, "assessment_type": "multiple-choice", "created": "2017-02-13T08:55:41Z", "prompt": {"answers": ["<p>addition-two</p>", "<p>addition2</p>", "<p>2addition</p>", "<p>addition two</p>"], "question": "<p>which of the following variable name will not throw error?</p>", "feedbacks": ["variable can't have '-' in its name", "", "It cant start with numbers", "variables should be only one word"], "relatedLectureIds": ["6480334"]}, "correct_response": ["b"], "updated": "2017-02-13T08:55:41Z", "section": "", "question_plain": "which of the following variable name will not throw error?", "related_lectures": [{"_class": "lecture", "id": 6480334, "title": "Variables", "created": "2017-02-04T18:16:00Z", "asset": {"_class": "asset", "id": 7808188, "asset_type": "Video", "title": "variables.mp4", "created": "2017-02-17T02:07:26Z"}, "object_index": 17, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480334"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193908, "assessment_type": "multiple-choice", "created": "2017-02-13T08:56:56Z", "prompt": {"answers": ["<p>variable_name</p>", "<p>variableName</p>", "<p>variablename</p>"], "question": "<p>Which is the best practice for creating variables?</p>", "feedbacks": ["", "", ""], "relatedLectureIds": ["6480334"]}, "correct_response": ["b"], "updated": "2017-02-13T08:56:56Z", "section": "", "question_plain": "Which is the best practice for creating variables?", "related_lectures": [{"_class": "lecture", "id": 6480334, "title": "Variables", "created": "2017-02-04T18:16:00Z", "asset": {"_class": "asset", "id": 7808188, "asset_type": "Video", "title": "variables.mp4", "created": "2017-02-17T02:07:26Z"}, "object_index": 17, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480334"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193910, "assessment_type": "multiple-choice", "created": "2017-02-13T08:58:23Z", "prompt": {"answers": ["<p>23</p>", "<p>'23'</p>", "<p>2</p>"], "question": "<p>What will be the value stored in the variable?</p>\n\n<p><code>var = 23</code> </p>", "relatedLectureIds": ["6480334"], "feedbacks": ["", "", ""]}, "correct_response": ["a"], "updated": "2017-02-13T08:58:23Z", "section": "", "question_plain": "What will be the value stored in the variable?\n\nvar = 23", "related_lectures": [{"_class": "lecture", "id": 6480334, "title": "Variables", "created": "2017-02-04T18:16:00Z", "asset": {"_class": "asset", "id": 7808188, "asset_type": "Video", "title": "variables.mp4", "created": "2017-02-17T02:07:26Z"}, "object_index": 17, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480334"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193912, "assessment_type": "multiple-choice", "created": "2017-02-13T08:59:25Z", "prompt": {"answers": ["<p>'2345'</p>", "<p>2345</p>", "<p>2435</p>"], "question": "<p>What will be the value stored in variable?</p>\n\n<p><code>var = '2345'</code> </p>", "feedbacks": ["", "", ""], "relatedLectureIds": ["6480334"]}, "correct_response": ["a"], "updated": "2017-02-13T09:01:46Z", "section": "", "question_plain": "What will be the value stored in variable?\n\nvar = '2345'", "related_lectures": [{"_class": "lecture", "id": 6480334, "title": "Variables", "created": "2017-02-04T18:16:00Z", "asset": {"_class": "asset", "id": 7808188, "asset_type": "Video", "title": "variables.mp4", "created": "2017-02-17T02:07:26Z"}, "object_index": 17, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480334"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1193914, "assessment_type": "multiple-choice", "created": "2017-02-13T09:01:01Z", "prompt": {"answers": ["<p>Hello World</p>", "<p>hello world</p>", "<p>Hello world</p>"], "question": "<p>What is the value stored in the variable?</p>\n\n<p><code>var = 'Hello world'</code> </p>", "relatedLectureIds": ["6480334"], "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2017-02-13T09:01:35Z", "section": "", "question_plain": "What is the value stored in the variable?\n\nvar = 'Hello world'", "related_lectures": [{"_class": "lecture", "id": 6480334, "title": "Variables", "created": "2017-02-04T18:16:00Z", "asset": {"_class": "asset", "id": 7808188, "asset_type": "Video", "title": "variables.mp4", "created": "2017-02-17T02:07:26Z"}, "object_index": 17, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6480334"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

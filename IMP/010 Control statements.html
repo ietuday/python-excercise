@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>010 Control statements</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 5, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1194446, "assessment_type": "multiple-choice", "created": "2017-02-13T18:12:27Z", "prompt": {"question": "<p>Where can we use break statement?</p>", "relatedLectureIds": ["6482908"], "answers": ["<p>If the flow should skip to new iteration</p>", "<p>If the flow need to exit from the current loop</p>", "<p>It can be used anywhere to prevent error</p>"], "feedbacks": ["", "", ""]}, "correct_response": ["b"], "updated": "2017-02-13T18:12:27Z", "section": "", "question_plain": "Where can we use break statement?", "related_lectures": [{"_class": "lecture", "id": 6482908, "title": "Break", "created": "2017-02-05T06:20:26Z", "asset": {"_class": "asset", "id": 7823524, "asset_type": "Video", "title": "break.mp4", "created": "2017-02-19T17:39:41Z"}, "object_index": 60, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482908"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194450, "assessment_type": "multiple-choice", "created": "2017-02-13T18:15:55Z", "prompt": {"question": "<p>Which of the following is used to prevent the program from errors</p>", "relatedLectureIds": ["6482912"], "answers": ["<p>break</p>", "<p>continue</p>", "<p>pass</p>", "<p>skip</p>"], "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2017-02-13T18:15:55Z", "section": "", "question_plain": "Which of the following is used to prevent the program from errors", "related_lectures": [{"_class": "lecture", "id": 6482912, "title": "Pass", "created": "2017-02-05T06:20:34Z", "asset": {"_class": "asset", "id": 7830550, "asset_type": "Video", "title": "pass.mp4", "created": "2017-02-20T17:53:21Z"}, "object_index": 64, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482912"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194452, "assessment_type": "multiple-choice", "created": "2017-02-13T18:18:44Z", "prompt": {"question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">var = 10\nfinal = ''\nwhile (var &gt;= 0):\n  final = final + str(var)\n  var -= 1\n  break\nprint(final)</pre>", "relatedLectureIds": ["6482908"], "feedbacks": ["", "", ""], "answers": ["<p>109876543210</p>", "<p>12345678910</p>", "<p>10</p>"]}, "correct_response": ["c"], "updated": "2017-02-13T18:18:44Z", "section": "", "question_plain": "What will be the output?\n\nvar = 10\nfinal = ''\nwhile (var &gt;= 0):\n  final = final + str(var)\n  var -= 1\n  break\nprint(final)", "related_lectures": [{"_class": "lecture", "id": 6482908, "title": "Break", "created": "2017-02-05T06:20:26Z", "asset": {"_class": "asset", "id": 7823524, "asset_type": "Video", "title": "break.mp4", "created": "2017-02-19T17:39:41Z"}, "object_index": 60, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482908"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194454, "assessment_type": "multiple-choice", "created": "2017-02-13T18:20:40Z", "prompt": {"question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">var = 10\nfinal = ''\nwhile (var &gt;= 0):\n  continue\n  final = final + str(var)\n  var -= 1\nprint(final)</pre>", "relatedLectureIds": ["6482910"], "feedbacks": ["", "", ""], "answers": ["<p>012345678910</p>", "<p>109876543210</p>", "<p>   </p>"]}, "correct_response": ["c"], "updated": "2017-02-13T18:20:40Z", "section": "", "question_plain": "What will be the output?\n\nvar = 10\nfinal = ''\nwhile (var &gt;= 0):\n  continue\n  final = final + str(var)\n  var -= 1\nprint(final)", "related_lectures": [{"_class": "lecture", "id": 6482910, "title": "Continue", "created": "2017-02-05T06:20:31Z", "asset": {"_class": "asset", "id": 7830488, "asset_type": "Video", "title": "continue.mp4", "created": "2017-02-20T17:42:28Z"}, "object_index": 62, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482910"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194460, "assessment_type": "multiple-choice", "created": "2017-02-13T18:26:20Z", "prompt": {"question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">for i in range(0,5):\n  var = ''\n  if i % 2 == 0:\n    var = var + str(i)\n  else:\n    pass\nprint(var)</pre>", "relatedLectureIds": ["6482912"], "feedbacks": ["For each iteration var value will be assigned to empty string", "", "", ""], "answers": ["<p>4</p>", "<p>024</p>", "<p>420</p>", "<p>error</p>"]}, "correct_response": ["a"], "updated": "2017-02-13T18:27:06Z", "section": "", "question_plain": "What will be the output?\n\nfor i in range(0,5):\n  var = ''\n  if i % 2 == 0:\n    var = var + str(i)\n  else:\n    pass\nprint(var)", "related_lectures": [{"_class": "lecture", "id": 6482912, "title": "Pass", "created": "2017-02-05T06:20:34Z", "asset": {"_class": "asset", "id": 7830550, "asset_type": "Video", "title": "pass.mp4", "created": "2017-02-20T17:53:21Z"}, "object_index": 64, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6482912"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>

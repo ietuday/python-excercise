@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>012 Exception Handling</title>
+    </head>
+    <body>
+
+        <div style="background-color:#ffffaa" align = "center">
+            <script>
+                var c = '';
+                var opt = '';
+                var n = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+
+                var quiz = {"count": 4, "next": null, "previous": null, "results": [{"_class": "assessment", "id": 1194488, "assessment_type": "multiple-choice", "created": "2017-02-13T18:48:43Z", "prompt": {"question": "<p>What will be the output?</p>\n\n<p><code>var = int('90f')</code> <br></p>", "answers": ["<p>IndexError</p>", "<p>TypeError</p>", "<p>ValueError</p>"], "relatedLectureIds": ["6484030"], "feedbacks": ["", "", ""]}, "correct_response": ["c"], "updated": "2017-02-13T18:48:43Z", "section": "", "question_plain": "What will be the output?\n\nvar = int('90f')", "related_lectures": [{"_class": "lecture", "id": 6484030, "title": "Exceptions", "created": "2017-02-05T13:29:41Z", "asset": {"_class": "asset", "id": 7724962, "asset_type": "Video", "title": "exceptions.mp4", "created": "2017-02-05T12:04:06Z"}, "object_index": 71, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484030"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194494, "assessment_type": "multiple-choice", "created": "2017-02-13T18:51:55Z", "prompt": {"question": "<p>What will be the output ?</p>\n\n<pre class=\"prettyprint linenums\">val = 'john'\nif val.isalpha():\nprint('It is alpha')</pre>", "relatedLectureIds": ["6484030"], "answers": ["<p>IndentationError</p>", "<p>It is alpha</p>", "<p>True</p>", "<p>ValueError</p>"], "feedbacks": ["", "", "", ""]}, "correct_response": ["a"], "updated": "2017-02-13T18:51:55Z", "section": "", "question_plain": "What will be the output ?\n\nval = 'john'\nif val.isalpha():\nprint('It is alpha')", "related_lectures": [{"_class": "lecture", "id": 6484030, "title": "Exceptions", "created": "2017-02-05T13:29:41Z", "asset": {"_class": "asset", "id": 7724962, "asset_type": "Video", "title": "exceptions.mp4", "created": "2017-02-05T12:04:06Z"}, "object_index": 71, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484030"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194500, "assessment_type": "multiple-choice", "created": "2017-02-13T18:56:52Z", "prompt": {"question": "<p>What will be the Output?</p>\n\n<pre class=\"prettyprint linenums\">try:\n  list1 = [1,2,3,4,5,6,7]\n  print(list1[8])\nexcept:\n  print('Some error occured')\nexcept IndexError:\n  print('Index out of range')</pre>", "answers": ["<p>Some error occured</p>", "<p>IndexError</p>", "<p>SyntaxError</p>", "<p>Index out of range</p>"], "relatedLectureIds": ["6484030"], "feedbacks": ["", "", "except can only be placed at last otherwise it will show syntax error", ""]}, "correct_response": ["c"], "updated": "2017-02-13T18:56:52Z", "section": "", "question_plain": "What will be the Output?\n\ntry:\n  list1 = [1,2,3,4,5,6,7]\n  print(list1[8])\nexcept:\n  print('Some error occured')\nexcept IndexError:\n  print('Index out of range')", "related_lectures": [{"_class": "lecture", "id": 6484030, "title": "Exceptions", "created": "2017-02-05T13:29:41Z", "asset": {"_class": "asset", "id": 7724962, "asset_type": "Video", "title": "exceptions.mp4", "created": "2017-02-05T12:04:06Z"}, "object_index": 71, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484030"}], "original_assessment_id": 0}, {"_class": "assessment", "id": 1194510, "assessment_type": "multiple-choice", "created": "2017-02-13T19:08:16Z", "prompt": {"question": "<p>What will be the output?</p>\n\n<pre class=\"prettyprint linenums\">try:\n  val = {'one':1,'two':2,'three':3}\n  try:\n    print(val['one1'])\n  except:\n    print('Key is not in dictionary')\nexcept:\n  print('There is some error in the code')\nfinally:\n  print('The values in dictionary are')\n  print(val.values())</pre>", "relatedLectureIds": ["6484030"], "answers": ["<p>key is not in dictionary</p>", "<p>There is some error in the code</p><p>The values in dictionary are</p><p>dict_values([2, 1, 3])<br></p>", "<p>key is not in dictionary</p><p>The values in dictionary are</p>\n\n<p>dict_values([2, 1, 3])</p>", "<p>1</p><p>The values in dictionary are</p>\n\n<p>dict_values([2, 1, 3])</p>"], "feedbacks": ["", "", "", ""]}, "correct_response": ["c"], "updated": "2017-02-13T19:08:16Z", "section": "", "question_plain": "What will be the output?\n\ntry:\n  val = {'one':1,'two':2,'three':3}\n  try:\n    print(val['one1'])\n  except:\n    print('Key is not in dictionary')\nexcept:\n  print('There is some error in the code')\nfinally:\n  print('The values in dictionary are')\n  print(val.values())", "related_lectures": [{"_class": "lecture", "id": 6484030, "title": "Exceptions", "created": "2017-02-05T13:29:41Z", "asset": {"_class": "asset", "id": 7724962, "asset_type": "Video", "title": "exceptions.mp4", "created": "2017-02-05T12:04:06Z"}, "object_index": 71, "url": "/learn-python-with-70-exercises-complete-beginner/learn/v4/t/lecture/6484030"}], "original_assessment_id": 0}]};
+
+                for (var i = 0; i < quiz.results.length; i++) {
+
+                    var question = '<font color="ff0000"><br><h3>Question-' + i + ': </h3> <b>' + quiz.results[i].prompt.question + '</b> <br>';
+
+                    for (var j = 0; j < quiz.results[i].prompt.answers.length; j++) {
+
+                        opt = opt.concat(quiz.results[i].prompt.answers[j] ? '<p style="cursor: pointer" onclick="this.style=\'font-weight: bold; color: #CE534D\'">' + n[j] + ': ' + quiz.results[i].prompt.answers[j].toString().replace(/,/g, '<br>') + '</p>' : '<br>');
+                    }
+                    var ans = quiz.results[i].correct_response ? '<p> <br> <input style="cursor: pointer" type="button" onclick="this.value=\'Answer is: ' + quiz.results[i].correct_response.toString() + '\'" value="Show Answer"></input> </p>' : '<br>';
+                    c = c.concat(question, opt, ans);
+                    opt = ''
+                    }
+                document.write(c);
+            </script>
+        </div>
+    </body>
+    </html>
